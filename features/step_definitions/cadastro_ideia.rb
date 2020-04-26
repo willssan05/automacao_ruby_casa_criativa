@@ -6,18 +6,17 @@ Dado("clique no botao adicionar nova ideia") do
   ideia.clicar_adicionar    
 end
 
-Quando("preencho os campos {string}, {string},{string},{string} e {string}") do |titulo, categoria, linkImagem, descricao, linkideia|
-    titulo_ideia = buscar_massa('Ideia', 'titulo')
+Quando("preencho os campos com as informaçõs da idéia {string}") do |codigo_ideia|
+    titulo_ideia = buscar_massa(codigo_ideia, 'titulo')
     ideia.preencher_titulo(titulo_ideia)
-    categoria_ideia = buscar_massa('Ideia', 'categoria')
+    categoria_ideia = buscar_massa(codigo_ideia, 'categoria')
     ideia.preencher_categoria(categoria_ideia)
-    link_ideia = buscar_massa('Ideia', 'linkImagem')
+    link_ideia = buscar_massa(codigo_ideia, 'linkImagem')
     ideia.preencher_linkimagem(link_ideia)
-    descricao_ideia = buscar_massa('Ideia', 'descricao')
+    descricao_ideia = buscar_massa(codigo_ideia, 'descricao')
     ideia.preencher_descricao(descricao_ideia)
-    link_ideia = buscar_massa('Ideia', 'linkideia')
+    link_ideia = buscar_massa(codigo_ideia, 'linkideia')
     ideia.preencher_linkideia(link_ideia)
-    
 end
 
 Quando("clico no botao salvar") do
@@ -25,5 +24,5 @@ Quando("clico no botao salvar") do
 end
 
 Então("vejo a minha ideia cadastrada") do
-  pending # Write code here that turns the phrase above into concrete actions
+  
 end

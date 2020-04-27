@@ -1,2 +1,4 @@
-report
+report/screenshots
+report/*html
+report/*json
 Gemfile.lock

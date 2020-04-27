@@ -16,16 +16,5 @@ pipeline {
                 echo 'Running regression tests'
             }
         }
-        stage('Acceptance') {
-            steps {
-                echo 'Wait for acceptance by User'
-                input(message: 'Go to production?', ok: 'Yes')
-            }
-        }
-        stage('Prod') {
-            steps {
-                echo 'WebApp is ready :)'
-            }
-        }
     }
 }

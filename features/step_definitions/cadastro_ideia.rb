@@ -24,5 +24,5 @@ Quando("clico no botao salvar") do
 end
 
 Então("vejo a minha ideia cadastrada") do
-  
+    expect(page).to have_content('Karaoke')
 end

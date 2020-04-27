@@ -10,7 +10,7 @@ class Ideia < SitePrism::Page
     element :linkideia, 'input[name=link]'
     element :btnsalvar, '#btnsalvar'
     element :btnvoltar, 'a[id="btnvoltar"]'
-    element :ideia_cadastrada, '#title'
+    element :btninicio, '#btninicio'
     
     def preencher_titulo(titulo_ideia)
         titulo.visible?
@@ -48,5 +48,10 @@ class Ideia < SitePrism::Page
     def clicar_voltar
         btnvoltar.visible?
         btnvoltar.click
+    end
+
+    def clicar_inicio
+        btninicio.visible?
+        btninicio.click
     end
 end

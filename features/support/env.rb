@@ -10,7 +10,7 @@ World(Pages)
 World(DataLoad)
 
 AMBIENTE = ENV['AMBIENTE']
-ENVIRONMENT_TYPE = ENV['ENVIRONMENT_TYPE']
+DATA = ENV['DATA']
 CONFIG = YAML.load_file(File.dirname(__FILE__) + "/ambientes/#{AMBIENTE}.yml")
 
 case ENV["BROWSER"]

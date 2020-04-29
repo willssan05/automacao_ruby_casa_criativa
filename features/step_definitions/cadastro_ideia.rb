@@ -7,6 +7,7 @@ Dado("clique no botao adicionar nova ideia") do
 end
 
 Quando("preencho os campos com as informaçõs da idéia {string}") do |codigo_ideia|
+    
     titulo_ideia = buscar_massa(codigo_ideia, 'titulo')
     ideia.preencher_titulo(titulo_ideia)
     categoria_ideia = buscar_massa(codigo_ideia, 'categoria')

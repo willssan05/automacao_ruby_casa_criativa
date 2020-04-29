@@ -9,13 +9,13 @@ pipeline {
             steps {
                 echo 'Building or resolve dependencies!'
                 sh 'rm -f Gemfile.lock'
-                sh 'mkdir -p tmp'
                 sh 'bundle install'
             }
         }
         stage('Tests') {
             steps {
                 echo 'Running regression tests'
+                sh 'cd /var/jenkins_home/workspace/automacao-casa-criativa'
                 sh 'bundle exec cucumber -p ci'
             }
         }
